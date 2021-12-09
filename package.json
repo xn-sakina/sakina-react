@@ -1,0 +1,68 @@
+{
+  "name": "sakina-react",
+  "version": "1.0.2",
+  "description": "React new typescript component file template code generator",
+  "author": "fz6m",
+  "homepage": "https://github.com/xn-sakina/sakina-react#README",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xn-sakina/sakina-react"
+  },
+  "keywords": [
+    "sakina",
+    "react",
+    "react-cli",
+    "react-generator",
+    "react-utils"
+  ],
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "bin": {
+    "sr": "bin/sr.js"
+  },
+  "scripts": {
+    "test": "ts-node ./test/sr.ts",
+    "dev": "node ./bin/sr.js",
+    "build:output": "rimraf dist && tsc",
+    "build": "node ./scripts/build.js",
+    "fix": "prettier -c --write \"src/**/*.{ts,tsx}\"",
+    "prepare": "husky install",
+    "prepublishOnly": "pnpm build",
+    "push": "npm publish --registry=https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^8.3.0",
+    "execa": "^5.0.0",
+    "fs-extra": "^10.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@fz6m/eslint-plugin-sakina": "^1.0.6",
+    "@types/fs-extra": "^9.0.13",
+    "@types/react": "^17.0.37",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.5.2"
+  },
+  "lint-staged": {
+    "*.ts": "prettier -c --write"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "license": "MIT"
+}
