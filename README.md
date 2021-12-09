@@ -23,7 +23,7 @@ such as project files tree:
 in `project/src/components` exec:
 
 ```bash
-  sr gs AnimaList
+  sr gs AnimeList
 ```
 
 then generate a simple react component file:
@@ -32,11 +32,11 @@ then generate a simple react component file:
  └─ project
     └─ src
        └─ components
-          └─ AnimaList.tsx
+          └─ AnimeList.tsx
 ```
 
 ```tsx
-// AnimaList.tsx
+// AnimeList.tsx
 import React from 'react'
 
 export interface IAnimeListProps {}
@@ -62,7 +62,7 @@ then generate a component with style file:
  └─ project
     └─ src
        └─ components
-          └─ AnimaList
+          └─ AnimeList
              ├─ index.tsx
              └─ index.module.scss
 ```
